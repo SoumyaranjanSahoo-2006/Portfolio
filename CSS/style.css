@@ -41,6 +41,9 @@ body {
   transition: 0.3s ease;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 /* ===============================
    HEADER LAYOUT
 ================================ */
@@ -1029,6 +1032,93 @@ header {
 .skill-big .java:hover p {
   color: var(--white);
 }
+/* =====================github================================ */
+.github-mini {
+  padding: 30px 10px;
+}
+
+.github-mini-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* STREAK (SMALL) */
+.mini-streak img {
+  width: 400px;   /* 🔥 control size here */
+  border-radius: 10px;
+}
+
+/* GRAPH */
+.mini-graph img {
+  width: 900px;   /* 🟩 dots size */
+  border-radius: 10px;
+}
+
+.github-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.github-header h2 {
+  font-size: 28px;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+/* underline accent */
+.github-header h2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  margin: 6px auto 0;
+  background: #cf2f3d;
+  border-radius: 5px;
+}
+
+.github-header p {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-top: 8px;
+}
+
+.github-header h2::after {
+  background: linear-gradient(90deg, #cf2f3d, transparent);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .mini-streak img {
+    width: 200px;
+  }
+
+  .mini-graph img {
+    width: 100%;
+  }
+
+ .github-header h2 {
+    font-size: 22px;
+  }
+
+  .github-header p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .github-header h2 {
+    font-size: 18px;
+  }
+
+  .github-header p {
+    font-size: 12px;
+  }
+}
+
 
 /* ===============================
    RESPONSIVE (MOBILE)
